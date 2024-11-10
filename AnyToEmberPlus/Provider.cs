@@ -11,11 +11,24 @@ namespace AnyToEmberPlus
     {
         protected EmberNode Node;
         protected string identifier;
+        protected Dictionary<string, Object> properties;
         Provider(EmberNode node)
         {
             Node = node;
         }
 
-        string ToString() { return identifier; }
+        abstract public string ToString();
+
+        abstract public void Run();
+
+        abstract public void Dispose();
+
+        abstract public void Stop();
+
+        public Dictionary<string, Object> getProperties()
+        {
+            return properties;
+        }
+
     }
 }

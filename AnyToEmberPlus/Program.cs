@@ -2,12 +2,11 @@ namespace AnyToEmberPlus
 {
     internal static class Program
     {
+        static List<Provider> Providers;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-
-        static List<Provider> Providers;
         static void Main()
         {
             var _ember = new EmberPlus(9000); 

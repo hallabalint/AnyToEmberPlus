@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnyToEmberPlus", "AnyToEmberPlus\AnyToEmberPlus.csproj", "{6B341F9C-6878-42DD-A855-B2D8C2E05122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StutechVar", "StutechVar\StutechVar.csproj", "{C672C858-86C7-4F81-AC74-CDF800475674}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnyToEmberPlus-StutechVar", "AnyToEmberPlus-StutechVar\AnyToEmberPlus-StutechVar.csproj", "{C672C858-86C7-4F81-AC74-CDF800475674}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
