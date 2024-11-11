@@ -36,14 +36,15 @@
             settingsToolStripMenuItem = new ToolStripMenuItem();
             emberProviderToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
+            refresToolStripMenuItem = new ToolStripMenuItem();
             btStart = new Button();
+            refresToolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // listBoxDataProviders
             // 
-            listBoxDataProviders.FormattingEnabled = true;
-            listBoxDataProviders.Items.AddRange(new object[] { "Egy", "Ketto", "Harom", "Negy" });
+            listBoxDataProviders.DisplayMember = "identifier";
             listBoxDataProviders.Location = new Point(12, 32);
             listBoxDataProviders.Name = "listBoxDataProviders";
             listBoxDataProviders.Size = new Size(394, 324);
@@ -58,6 +59,7 @@
             btAdd.TabIndex = 1;
             btAdd.Text = "Add";
             btAdd.UseVisualStyleBackColor = true;
+            btAdd.Click += btAdd_Click;
             // 
             // btRemove
             // 
@@ -67,6 +69,7 @@
             btRemove.TabIndex = 2;
             btRemove.Text = "Remove";
             btRemove.UseVisualStyleBackColor = true;
+            btRemove.Click += btRemove_Click;
             // 
             // btEdit
             // 
@@ -76,11 +79,12 @@
             btEdit.TabIndex = 3;
             btEdit.Text = "Edit";
             btEdit.UseVisualStyleBackColor = true;
+            btEdit.Click += btEdit_Click;
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { settingsToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { settingsToolStripMenuItem, quitToolStripMenuItem, refresToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(418, 28);
@@ -98,7 +102,7 @@
             // emberProviderToolStripMenuItem
             // 
             emberProviderToolStripMenuItem.Name = "emberProviderToolStripMenuItem";
-            emberProviderToolStripMenuItem.Size = new Size(224, 26);
+            emberProviderToolStripMenuItem.Size = new Size(205, 26);
             emberProviderToolStripMenuItem.Text = "Ember+ provider";
             // 
             // quitToolStripMenuItem
@@ -106,6 +110,14 @@
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             quitToolStripMenuItem.Size = new Size(51, 24);
             quitToolStripMenuItem.Text = "Quit";
+            // 
+            // refresToolStripMenuItem
+            // 
+            refresToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { refresToolStripMenuItem1 });
+            refresToolStripMenuItem.Name = "refresToolStripMenuItem";
+            refresToolStripMenuItem.Size = new Size(64, 24);
+            refresToolStripMenuItem.Text = "Refres";
+            refresToolStripMenuItem.Click += refresToolStripMenuItem_Click;
             // 
             // btStart
             // 
@@ -115,8 +127,15 @@
             btStart.TabIndex = 5;
             btStart.Text = "Start";
             btStart.UseVisualStyleBackColor = true;
+            btStart.Click += btStart_Click;
             // 
-            // Form1
+            // refresToolStripMenuItem1
+            // 
+            refresToolStripMenuItem1.Name = "refresToolStripMenuItem1";
+            refresToolStripMenuItem1.Size = new Size(133, 26);
+            refresToolStripMenuItem1.Text = "Refres";
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -128,7 +147,7 @@
             Controls.Add(listBoxDataProviders);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -147,5 +166,7 @@
         private ToolStripMenuItem emberProviderToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
         private Button btStart;
+        private ToolStripMenuItem refresToolStripMenuItem;
+        private ToolStripMenuItem refresToolStripMenuItem1;
     }
 }

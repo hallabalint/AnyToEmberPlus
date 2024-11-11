@@ -15,7 +15,8 @@ namespace AnyToEmberPlus
         public AddProvider()
         {
             InitializeComponent();
-        }
+            comboBox1.DataSource = Program.LoadedTypes;
+    }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -24,7 +25,9 @@ namespace AnyToEmberPlus
 
         private void btSave_Click(object sender, EventArgs e)
         {
-           
+            
+           Program.AddModule((Type)comboBox1.SelectedValue, tbName.Text, tbNodeName.Text);
+            this.Close();
         }
     }
 }

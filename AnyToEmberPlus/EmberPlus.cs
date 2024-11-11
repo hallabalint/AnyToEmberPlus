@@ -9,17 +9,17 @@ using EmberPlusProviderClassLib.Model;
 
 namespace AnyToEmberPlus
 {
-    internal class EmberPlus
+    public class EmberPlus
     {
-        EmberPlusProvider _emberTree;
-        int _nodeNumber;
+        public static EmberPlusProvider EmberTree;
+        int _nodeNumber = 2;
         public EmberPlus(int port) {
-            _emberTree = new EmberPlusProvider(
+            EmberTree = new EmberPlusProvider(
         9000,
         "AnyToEmber+",
         "AnyToEmber+");
 
-            _emberTree.CreateIdentityNode(
+            EmberTree.CreateIdentityNode(
                 1,
                 "Client1",
                 "AnyToEmber",
@@ -29,7 +29,12 @@ namespace AnyToEmberPlus
             // General utility node
         }
 
-        public EmberNode getNewEmberNode(string name) => _emberTree.AddChildNode(_nodeNumber++, name);
+        public EmberNode getNewEmberNode(string name) => EmberTree.AddChildNode(_nodeNumber++, name);
+
+        public static void AddStringToNode(EmberNode node, int id, bool writeable, string name, string value)
+        {
+            node.AddStringParameter(id, name, EmberTree, writeable,value);
+        }
 
         
     }

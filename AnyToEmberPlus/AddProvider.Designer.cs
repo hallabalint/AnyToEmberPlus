@@ -30,9 +30,9 @@
         {
             comboBox1 = new ComboBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            tbName = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            tbNodeName = new TextBox();
             btClose = new Button();
             btSave = new Button();
             SuspendLayout();
@@ -54,12 +54,12 @@
             label1.TabIndex = 1;
             label1.Text = "Provider Name";
             // 
-            // textBox1
+            // tbName
             // 
-            textBox1.Location = new Point(12, 79);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(231, 27);
-            textBox1.TabIndex = 2;
+            tbName.Location = new Point(12, 79);
+            tbName.Name = "tbName";
+            tbName.Size = new Size(231, 27);
+            tbName.TabIndex = 2;
             // 
             // label2
             // 
@@ -70,12 +70,12 @@
             label2.TabIndex = 3;
             label2.Text = "Ember Node name";
             // 
-            // textBox2
+            // tbNodeName
             // 
-            textBox2.Location = new Point(12, 147);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(231, 27);
-            textBox2.TabIndex = 4;
+            tbNodeName.Location = new Point(12, 147);
+            tbNodeName.Name = "tbNodeName";
+            tbNodeName.Size = new Size(231, 27);
+            tbNodeName.TabIndex = 4;
             // 
             // btClose
             // 
@@ -104,9 +104,9 @@
             ClientSize = new Size(258, 235);
             Controls.Add(btSave);
             Controls.Add(btClose);
-            Controls.Add(textBox2);
+            Controls.Add(tbNodeName);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(tbName);
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Name = "AddProvider";
@@ -119,9 +119,9 @@
 
         private ComboBox comboBox1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox tbName;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox tbNodeName;
         private Button btClose;
         private Button btSave;
     }

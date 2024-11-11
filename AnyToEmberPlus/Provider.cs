@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmberPlusProviderClassLib;
 using EmberPlusProviderClassLib.EmberHelpers;
 
 namespace AnyToEmberPlus
 {
-    internal abstract class Provider
+    public abstract class Provider
     {
         protected EmberNode Node;
+        public bool state = false;
         protected string identifier;
-        protected Dictionary<string, Object> properties;
-        Provider(EmberNode node)
+        public string Identifier
+        {
+            get { return this.ToString(); }
+        }
+        public Dictionary<string, string> Properties { get; set; }
+        public Provider(EmberNode node)
         {
             Node = node;
         }
@@ -25,10 +31,6 @@ namespace AnyToEmberPlus
 
         abstract public void Stop();
 
-        public Dictionary<string, Object> getProperties()
-        {
-            return properties;
-        }
 
     }
 }
